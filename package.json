@@ -1,0 +1,53 @@
+{
+  "name": "@cmskit/cli",
+  "version": "1.0.0",
+  "description": "A powerful CLI for installing custom UI component packages.",
+  "main": "./dist/index.js",
+  "type": "module",
+  "bin": {
+    "cmskit": "./bin/cmskit.js"
+  },
+  "scripts": {
+    "dev": "tsx --watch src/cli.ts",
+    "build": "tsup",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "ui",
+    "components",
+    "svelte",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "execa": "^8.0.1",
+    "fast-glob": "^3.3.2",
+    "ora": "^8.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.7",
+    "vitest": "^1.0.1"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
